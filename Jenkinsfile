@@ -35,7 +35,9 @@ pipeline {
         stage('Deliver') {
             steps {
                 //sh("su -s && ./jenkins/scripts/deliver.sh")
-                sh '/jenkins/scripts/deliver.sh'
+                sh 'cd /jenkins/scripts/'
+                sh 'chmod 777 deliver.sh'
+                sh './deliver.sh'
             }
         }
     }
