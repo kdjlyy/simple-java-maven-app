@@ -1,5 +1,4 @@
 pipeline {
-JENKINS_USER="root"
     agent {
         docker {
             image 'maven:3.3.3'
@@ -35,7 +34,7 @@ JENKINS_USER="root"
         }
         stage('Deliver') {
             steps {
-               su sh './jenkins/scripts/deliver.sh'
+               sh './jenkins/scripts/deliver.sh'
             }
         }
     }
