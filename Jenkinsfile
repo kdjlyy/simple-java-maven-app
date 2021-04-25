@@ -34,7 +34,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-               sh 'echo lj1837520 | su ./jenkins/scripts/deliver.sh'
+                sh("echo lj1837520|sudo -S ./jenkins/scripts/deliver.sh")
+                //sh 'echo lj1837520|sudo -S ./jenkins/scripts/deliver.sh'
             }
         }
     }
