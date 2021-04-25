@@ -40,6 +40,7 @@ pipeline {
                 //sh 'pwd'
                 //sh 'chmod 777 /var/jenkins_home/workspace/simple-java-maven-app_main/jenkins/scripts/deliver.sh'
                 sh 'ls ./jenkins/scripts/ -al'
+                sh 'chmod 777 ./jenkins/scripts/deliver.sh'
                 sh './jenkins/scripts/deliver.sh'
             }
         }
