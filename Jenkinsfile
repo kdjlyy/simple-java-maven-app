@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.3.3'
-            args '-v //C/Users/kdjlyy/.m2:/root/.m2'
+            args '-v C:/Users/kdjlyy/.m2:/root/.m2'
         }
     }
     stages {
@@ -32,11 +32,6 @@ pipeline {
                 }
             }
         }
-//         stage('tzs check') {
-//             steps {
-//                 input "Does the staging environment look ok?"
-//             }
-//         }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
