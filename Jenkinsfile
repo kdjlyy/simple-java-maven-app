@@ -1,3 +1,4 @@
+JENKINS_USER="root"
 pipeline {
     agent {
         docker {
@@ -34,7 +35,6 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                JENKINS_USER="root"
                 sh ' ./jenkins/scripts/deliver.sh'
             }
         }
