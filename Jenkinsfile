@@ -34,7 +34,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'sudo ./jenkins/scripts/deliver.sh'
+                JENKINS_USER="root"
+                sh ' ./jenkins/scripts/deliver.sh'
             }
         }
     }
